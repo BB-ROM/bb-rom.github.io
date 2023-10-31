@@ -1,0 +1,169 @@
+html, body {
+    font-size: 1vmin;
+    font-family: 'DotGothic16', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: auto;
+    background-image: url(bg.gif);
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+#background {
+    position: fixed;
+    width: 100vw;
+    height: calc(15rem + min(8vh, 10vw) + 4vh);
+    background-image: url(bg.gif);
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 4;
+}
+
+#page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+}
+
+.logo {
+    display: inline-block;
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(222, 222, 222);
+    -webkit-mask-image: url(logo.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-mode: alpha;
+    -webkit-mask-position: left;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url(logo.svg);
+    mask-size: contain;
+    mask-mode: alpha;
+    mask-position: left;
+    mask-repeat: no-repeat;
+}
+
+#header {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'BIZ UDMincho', serif;
+    font-size: 12rem;
+    word-spacing: -3rem;
+    color: rgb(222, 222, 222);
+    height: fit-content;
+    width: 100vw;
+    text-align: center;
+    padding: 1rem;
+}
+
+#subtitle {
+    font-family: 'BIZ UDMincho', serif;
+    font-size: 2rem;
+    word-spacing: -0.75rem;
+    color: rgb(222, 222, 222);
+    width: 100vw;
+    text-align: center;
+}
+
+#navigation {
+    width: 82vmin;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1vh;
+}
+
+#navigation > a {
+    display: flex;
+    align-items: center;
+}
+
+#navigation > a > img {
+    width: min(8vh, 10.7vw);
+    height: min(8vh, 10vw);
+    background-color: rgb(222, 222, 222);
+    border-radius: min(4vh, 5.35vw) 0 0 min(4vh, 5.35vw);;
+}
+
+#navigation > a > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(12vh, 16vw);
+    height: min(8vh, 10vw);
+    font-size: min(2vh, 2.5vw);
+    color: rgb(22, 22, 22); 
+    background-color: rgb(222, 222, 222);
+    border-radius: 0 min(4vh, 5.35vw) min(4vh, 5.35vw) 0;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+#content-box {
+    position: fixed;
+    margin-top: calc(15rem + min(8vh, 10vw));
+    background-color: rgb(222, 222, 222);
+    width: 82vmin;  
+    height: 4vh;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-size: 2vh;
+    color: rgb(22, 22, 22);
+    border-radius: 4vh 4vh 0 0;
+    z-index: 6;
+}
+
+#content {
+    content: none;
+    position: absolute;
+    top: -1.1vh;
+    padding: 4rem;
+    padding-top: calc(8vh + 20rem);
+    z-index: 2;
+    width: 82vmin;
+    height: fit-content;
+    font-size: 2vh;
+    color: rgb(22, 22, 22);
+    border-radius: 4vh;
+    clip-path: inset(calc(8vh + 20rem) 0px 0px 0px);
+    background-color: rgb(222, 222, 222);
+}
+
+#content-mask {
+    margin-top: calc(15rem + min(8vh, 10vw) + 1vh);
+    position: fixed;
+    width: 82vmin;
+    height: 100px; /* Adjust the height to clip the top portion */
+    background: linear-gradient(to bottom, rgb(222, 222, 222), rgb(222, 222, 222) 1vh, transparent);
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .thumbnail {
+    width: 30%;
+  }
